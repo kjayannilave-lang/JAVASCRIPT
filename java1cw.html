@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onlinestore sale</title>
+</head>
+<body>
+    <h2>
+        store sales calculation
+    </h2>
+    <p id="result"></p>
+    <script>
+        //number of items sold
+        let TshirtQnty =5;
+        let CapQnty   =3;
+        //store item prices
+        var tprice =400;
+        var capprice =150;
+        // first total calculation
+        let total = (TshirtQnty*tprice)+ (CapQnty*capprice);
+        //show first total
+        document.getElementById("result").innerHTML= "first total earnings:$ " + total +"<br>";
+        //updated tshirt price
+        let NEwprice=450;
+        // UPDATED CALCULATION  
+        let anothercal= (TshirtQnty*450)+ (CapQnty*capprice);
+        //show updated calculation
+        document.getElementById("result").innerHTML+="updated total earnings:$" + anothercal +"<br>"
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

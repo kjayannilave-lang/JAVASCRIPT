@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var userProfile = {
+    username: " CoolUser99 ",
+    bio: " I LOVE coding! JavaScript is Great!!! "
+};
+
+function cleanUserBio(profile) {
+
+    // Clean username
+    var cleanedUsername = profile.username.trim().toLowerCase();
+
+    // Clean bio
+    var cleanedBio = profile.bio.trim().toLowerCase();
+
+    // Replace "javascript" with "JS"
+    cleanedBio = cleanedBio.replaceAll("javascript", "JS");
+
+    // Count total characters
+    var bioLength = cleanedBio.length;
+
+    // Return new object
+    return {
+        username: cleanedUsername,
+        bio: cleanedBio,
+        bioLength: bioLength
+    };
+}
+
+// Store result
+var finalResult = cleanUserBio(userProfile);
+
+// Display result
+console.log(finalResult);
+    </script>
+    
+</body>
+</html>

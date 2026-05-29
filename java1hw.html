@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grocerry shop</title>
+</head>
+<body>
+    <script>
+        //item Names
+        let ricename = "rice";
+        let sugername = "Suger";
+        let wheatname = "Wheat";
+        //item price
+        var ricePrice = 10;
+        var sugerPrice = 20;
+        var wheatPrice= 15;
+        // item Quantity
+        let riceQnty= 1;
+        let sugerQnty=29;
+        let wheatQnty= 37;
+        // cost of each item
+        let ricecost = (ricePrice*riceQnty);
+        let sugercost = (sugerPrice*sugerQnty);
+        let wheatcost = (wheatPrice*wheatQnty);
+        //display item cost
+        console.log (ricename+"cost:$"+ricecost);
+        console.log(sugername+"cost:$"+sugercost);
+        console.log(wheatname+"cost:$"+wheatcost);
+        //calculate total bill
+        let totalbill = ricecost+sugercost+wheatcost;
+        //display totalbill
+        console.log("totalbill:$"+ totalbill);
+        //change quantity of suger
+         sugerQnty=22;
+        //recalculate sugercost
+         sugercost = (sugerQnty*sugerPrice);
+        //recalculate totalbill
+        totalbill= ricecost+sugercost+wheatcost;
+        //display updated totalbill
+        console.log("updated total bill:$"+ totalbill)
+    </script>
+    
+</body>
+</html>

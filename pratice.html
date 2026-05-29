@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>library</title>
 </head>
 <body>
-    
-<h1>Body of the webpage </h1>
-<script type = "text/javascript">
-document.write("Hello, I am a Script inside the &lt;body&gt; tag.")
-</script>
+    <script>
+        //creating the book object
+        let book= {
+            title : "The alchimist",
+            author :"paulo coehlo",
+            year  : "1988",
+            //method to return book summery
+            getsummery:function() {
+                return "The book" + this .title + "was written by" + this.author;
+            }
+        };
+        // function to dsplay the summery   
+        function printbook (book) {
+            console.log (book.getsummery()) ;
+        }
+        //calling the function
+        printbook(book);
 
+    </script>
     
 </body>
 </html>

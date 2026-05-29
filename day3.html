@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>work</title>
+</head>
+<body>
+    <script>
+        var feedback = "   I loved the FOOD and the service!   ";
+
+// Remove extra spaces
+feedback = feedback.trim();
+console.log("After trim:", feedback);
+
+// Convert to lowercase
+feedback = feedback.toLowerCase();
+console.log("Lowercase:", feedback);
+
+// Replace "food" with "ambience"
+feedback = feedback.replace("food", "ambience");
+console.log("After replace:", feedback);
+
+// Find position of "service"
+var position = feedback.indexOf("service");
+console.log("Position of 'service':", position);
+
+// Convert string into array of words
+var wordsArray = feedback.split(" ");
+console.log("Array of words:", wordsArray);
+    </script>
+    
+</body>
+</html>

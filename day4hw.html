@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Randomly pick a number between 1 and 50
+let mysteryLevel = Math.floor(Math.random() * 50) + 1;
+
+// User input score as a string
+let userScore = "45";
+
+// Convert the string to a number
+let score = Number(userScore);
+
+// Absolute difference between mystery level and score
+let difference = Math.abs(mysteryLevel - score);
+
+// Square root of the user's score
+let squareRoot = Math.sqrt(score);
+
+// Value of Pi
+let piValue = Math.PI;
+
+// Implicit conversion
+let multipliedValue = "20" * 5;
+
+// Highest and lowest values among 10, 20, and mystery level
+let highestValue = Math.max(10, 20, mysteryLevel);
+let lowestValue = Math.min(10, 20, mysteryLevel);
+
+// Display results
+console.log("Mystery Level:", mysteryLevel);
+console.log("User Score:", score);
+console.log("Absolute Difference:", difference);
+console.log("Square Root of Score:", squareRoot);
+console.log("Pi Value:", piValue);
+console.log('"20" * 5 =', multipliedValue);
+console.log("Highest Value:", highestValue);
+console.log("Lowest Value:", lowestValue);
+    </script>
+    
+</body>
+</html>

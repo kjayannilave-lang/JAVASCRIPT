@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="checkReturn()">Check Return Status</button>
+
+<p id="result"></p>
+
+<script>
+const order = {
+    itemName: "Headphones",
+    isDelivered: true,
+    daysSinceDelivery: 5
+};
+
+function checkReturn() {
+
+    // Check return eligibility without if-else
+    const message =
+        (order.isDelivered && order.daysSinceDelivery <= 7 && "Eligible for Return")
+        || "Return Period Expired";
+
+    document.getElementById("result").innerHTML = message;
+
+    // Check if itemName exists
+    console.log("itemName exists:", "itemName" in order);
+
+    // Remove daysSinceDelivery property
+    delete order.daysSinceDelivery;
+
+    console.log(order);
+}
+</script>
+
+</body>
+</html>

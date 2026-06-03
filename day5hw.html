@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="checkAccess()">Check Admin Access</button>
+
+<p id="result"></p>
+
+<script>
+// Variables
+let userName = "John";
+let age = 20;
+let isAdmin = true;
+
+// User object
+let user = {
+    name: userName,
+    age: age,
+    isAdmin: isAdmin
+};
+
+function checkAccess() {
+
+    // Check if age property exists
+    console.log("age exists:", "age" in user);
+
+    // Check access using ternary operator
+    let message = (user.age >= 18 && user.isAdmin)
+        ? "Access Granted"
+        : "Access Denied";
+
+    document.getElementById("result").innerHTML = message;
+
+    // Delete age property
+    delete user.age;
+
+    console.log(user);
+}
+</script>
+
+</body>
+</html>

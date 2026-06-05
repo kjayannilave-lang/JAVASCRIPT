@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+let validChances = 0;
+let guessedCorrectly = false;
+
+while (validChances < 5) {
+
+    let guess = Number(prompt("Enter a number between 1 and 5:"));
+
+    // Invalid input
+    if (guess < 1 || guess > 5) {
+        console.log("Invalid input");
+        continue;
+    }
+
+    validChances++;
+
+    // Display number in words
+    switch (guess) {
+        case 1:
+            console.log("One");
+            break;
+        case 2:
+            console.log("Two");
+            break;
+        case 3:
+            console.log("Three");
+            break;
+        case 4:
+            console.log("Four");
+            break;
+        case 5:
+            console.log("Five");
+            break;
+    }
+
+    // Check the guess
+    if (guess === 3) {
+        console.log("You guessed it right!");
+        guessedCorrectly = true;
+        break;
+    } else {
+        console.log("Wrong guess. Try again.");
+    }
+}
+
+// Game over if not guessed correctly
+if (!guessedCorrectly) {
+    console.log("Game over");
+}
+
+</script>
+
+</body>
+</html>

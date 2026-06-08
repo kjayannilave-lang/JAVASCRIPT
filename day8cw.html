@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="output"></p>
+
+<script>
+// Friend object
+let friend = {
+  name: "John",
+  birthDate: "1999-07-05"
+};
+
+function getBirthdayDetails(friend) {
+  // Convert string to Date object
+  let birth = new Date(friend.birthDate);
+
+  // Month names array
+  let months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+
+  // Extract details
+  let day = birth.getDate();
+  let month = months[birth.getMonth()];
+  let year = birth.getFullYear();
+
+  // Get today's date
+  let today = new Date();
+
+  // Calculate age
+  let age = today.getFullYear() - year;
+
+  // Adjust age if birthday hasn't occurred yet this year
+  let hasHadBirthday =
+    today.getMonth() > birth.getMonth() ||
+    (today.getMonth() === birth.getMonth() && today.getDate() >= day);
+
+  if (!hasHadBirthday) {
+    age--;
+  }
+
+  // Create result string
+  let result = `${friend.name} was born on ${day} ${month}, ${year} and is ${age} years old.`;
+
+  // Display output
+  document.getElementById("output").innerHTML = result;
+}
+
+// Call function
+getBirthdayDetails(friend);
+
+</script>
+
+</body>
+</html>

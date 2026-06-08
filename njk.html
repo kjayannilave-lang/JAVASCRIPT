@@ -1,44 +1,51 @@
 
-        
 <!DOCTYPE html>
 <html>
 <body>
 
-
 <p id="demo"></p>
 
+
 <script>
-document.getElementById("demo").innerHTML= Math.floor(Math.random()*100);
+
+var hjk = [1,2,3,4];
+var yui = hjk.filter(myfunction);
+function myfunction (value,index,array) {
+  return value>2 
+};
+document.getElementById("demo").innerHTML=yui;
+
+
+
+
+
 
 </script>
-<p id="mon"></p>
-<button onclick="document.getElementById('mon').innerHTML=radfghno(2,8)">click me</button>
+<p id="ginger"></p>
+
 <script>
-  
-function nkj (min,max) {
-  return Math.floor (Math.random()*(max-min+1)+min);
+  var method = [1,2,3,4,5];
+var target = method.reduce(myfunction);
+function myfunction (total,value,index,array){
+  return value+total;
 }
+document.getElementById("ginger").innerHTML=target;
 
 
 
 
 </script>
+  <p id="dakini"></p>
 <script>
-  var tiger = "6" + 9 ;
-console.log(tiger);
-console.log(typeof ('tiger'));
 
-
-var result_6 = Number(' ')
-console.log(result_6);
-console.log(typeof(result_6));
-
-output = String(3 + 7);
-console.log(output); 
-console.log(typeof('output'));
+var thangu = [1,2,3,4,5];
+var mangu = thangu.every(myfunction);
+function myfunction (value,index,array){
+  return value >2 ;
+}
+document.getElementById("dakini").innerHTML=mangu;
 
 </script>
-
 
 </body>
 </html>

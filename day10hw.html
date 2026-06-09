@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JSON feedback data as a string
+const jsonString = `{
+  "name": "Alice",
+  "email": "alice@example.com",
+  "feedback": "Thank you for the excellent service!"
+}`;
+
+// Named arrow function
+const checkFeedback = () => {
+  try {
+    // Convert JSON string to JavaScript object
+    const userData = JSON.parse(jsonString);
+
+    // Get feedback text
+    const feedback = userData.feedback || "";
+
+    // Check for the word "thank" (case-insensitive)
+    if (feedback.toLowerCase().includes("thank")) {
+      console.log("Positive feedback received");
+    } else {
+      console.log("Feedback noted");
+    }
+  } catch (error) {
+    console.error("Error: Invalid JSON data.");
+    console.error(error.message);
+  }
+};
+
+// Run the function
+checkFeedback();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JSON data as a string
+const jsonText = `{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "message": "Hello, I would like more information."
+}`;
+
+// Named arrow function
+const processMessage = () => {
+  try {
+    // Convert JSON text into a JavaScript object
+    const userData = JSON.parse(jsonText);
+
+    // Print the message sender
+    console.log(`Message received from ${userData.name}`);
+
+    // Optional: Display all details
+    console.log("Email:", userData.email);
+    console.log("Message:", userData.message);
+  } catch (error) {
+    // Handle invalid JSON errors
+    console.error("Error parsing JSON:", error.message);
+  }
+};
+
+// Run the function
+processMessage();
+
+    </script>
+    
+    
+</body>
+</html>
